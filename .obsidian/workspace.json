@@ -1,0 +1,242 @@
+{
+  "main": {
+    "id": "cfc4bf6c7f3101e6",
+    "type": "split",
+    "children": [
+      {
+        "id": "6f307d77434f5fde",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8b155d43f8dce2e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend Development/DataBases & MySQL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "be47d8abb7a41af8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend Development/Linux Fundamentals.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bd018ef6ee663f89",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend Development/Sequelize & CRUD.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "78de25cae0d88e67",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend Development/Setting up HTTP server on Node & Express.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "09857cbf84f0ba98",
+    "type": "split",
+    "children": [
+      {
+        "id": "638cb527a6f327e4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3f1ef4ac3680d109",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cfcbbc740983aa55",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "coer",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9fd05bc60a2df1ce",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "a599db3f1163b02a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 376.5
+  },
+  "right": {
+    "id": "687bee340722f156",
+    "type": "split",
+    "children": [
+      {
+        "id": "ab652712a08285a1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "da4deb7a4943683b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Backend Development/Linux Fundamentals.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "8150e7aa080536ad",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Backend Development/Linux Fundamentals.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "35e6fc1b01797554",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "5d88337c702ebcc5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Backend Development/Linux Fundamentals.md"
+              }
+            }
+          },
+          {
+            "id": "cb0de19338aaef33",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "audio-recorder:Start/stop recording": false,
+      "markdown-importer:Open format converter": false
+    }
+  },
+  "active": "be47d8abb7a41af8",
+  "lastOpenFiles": [
+    "README.md",
+    "Flights-App.md",
+    "Backend Development/DataBases & MySQL.md",
+    "Backend Development/Sequelize & CRUD.md",
+    "Backend Development/Linux Fundamentals.md",
+    "Backend Development/Git & Github.md",
+    "Backend Development/MVC Architecture.md",
+    "Backend Development/Async Nature of JS.md",
+    "Backend Development/Folder Structures & ORM.md",
+    "Backend Development/Intro to Node.md",
+    "Backend Development/Setting up HTTP server on Node & Express.md",
+    "Backend Development/Client Server Architecture & REST.md",
+    "Backend Development/Module Pattern in Node.md",
+    "2023-12-18.md",
+    "2023-11-24.md",
+    "Matlab.md",
+    "Recording 20231017194832.webm",
+    "2023-11-23.md",
+    "Backend Development/Generators, Iterators & Async Await.md",
+    "Backend Development/Callbacks & Inversion of Control.md",
+    "Backend Development/Short circuiting and Coercion.md",
+    "Backend Development/Variables.md",
+    "Backend Development/Useful Packages.md",
+    "Backend Development/Security.md",
+    "Backend Development/Scopes.md",
+    "Backend Development/Promises in Javascript.md",
+    "Backend Development/Operators in Javascript.md",
+    "Untitled.canvas",
+    "Frontend Development",
+    "A",
+    "ASync Await",
+    "Notes/Untitled.canvas"
+  ]
+}

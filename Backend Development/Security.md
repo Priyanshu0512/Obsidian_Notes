@@ -1,0 +1,1 @@
+Environment variable - In order to secure sensitive keys they are stored in the variable in .env file and are referenced from it. When the code is pushed on to the github the .env file is not pushed onto the github.
