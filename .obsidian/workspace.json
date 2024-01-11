@@ -18,45 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "be47d8abb7a41af8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Backend Development/Linux Fundamentals.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bd018ef6ee663f89",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Backend Development/Sequelize & CRUD.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "78de25cae0d88e67",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Backend Development/Setting up HTTP server on Node & Express.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -130,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Backend Development/Linux Fundamentals.md",
+                "file": "Backend Development/DataBases & MySQL.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Backend Development/Linux Fundamentals.md",
+                "file": "Backend Development/DataBases & MySQL.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -170,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Backend Development/Linux Fundamentals.md"
+                "file": "Backend Development/DataBases & MySQL.md"
               }
             }
           },
@@ -180,7 +143,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -204,24 +169,26 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "be47d8abb7a41af8",
+  "active": "8b155d43f8dce2e1",
   "lastOpenFiles": [
+    "Backend Development/Promises in Javascript.md",
+    "Backend Development/DataBases & MySQL.md",
+    "Matlab.md",
+    "Backend Development/Module Pattern in Node.md",
+    "Backend Development/Sequelize & CRUD.md",
+    "Backend Development/Setting up HTTP server on Node & Express.md",
+    "2024-01-09.md",
+    "Backend Development/Linux Fundamentals.md",
     "README.md",
     "Flights-App.md",
-    "Backend Development/DataBases & MySQL.md",
-    "Backend Development/Sequelize & CRUD.md",
-    "Backend Development/Linux Fundamentals.md",
     "Backend Development/Git & Github.md",
     "Backend Development/MVC Architecture.md",
     "Backend Development/Async Nature of JS.md",
     "Backend Development/Folder Structures & ORM.md",
     "Backend Development/Intro to Node.md",
-    "Backend Development/Setting up HTTP server on Node & Express.md",
     "Backend Development/Client Server Architecture & REST.md",
-    "Backend Development/Module Pattern in Node.md",
     "2023-12-18.md",
     "2023-11-24.md",
-    "Matlab.md",
     "Recording 20231017194832.webm",
     "2023-11-23.md",
     "Backend Development/Generators, Iterators & Async Await.md",
@@ -231,8 +198,6 @@
     "Backend Development/Useful Packages.md",
     "Backend Development/Security.md",
     "Backend Development/Scopes.md",
-    "Backend Development/Promises in Javascript.md",
-    "Backend Development/Operators in Javascript.md",
     "Untitled.canvas",
     "Frontend Development",
     "A",

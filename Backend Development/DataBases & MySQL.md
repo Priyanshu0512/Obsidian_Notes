@@ -60,7 +60,7 @@ Ex - insert into first(Name , DOB , Salary) values("Priyanshu" ,"2002-12-05", 0.
 
 - `select * from <table-name> where(condition);`-> This displays all the datapoints which meet the required conditions .
 ```mysql
-1. select * from second where Gender ='Male'N;
+1. select * from second where Gender ='Male';
 2. select * from second where DOB =  "2002-01-01" and Gender = "Female";
 3. select * from second where not Gender = "Female";
 4. select * from second where DOB = "2023--9-06" or Gender = "Female";
@@ -99,7 +99,7 @@ select * from second where Gender = "Male" order by DOB desc Limit 2; //combinin
 ```mysql
 delete from second where DOB = "2002-01-01" order by name desc limit 1;
 ```
-- `delect *  from <table-name` -> Deletes all the data form the table.
+- `delete *  from <table-name` -> Deletes all the data form the table.
 
 **Updation of Data** 
 
@@ -398,3 +398,94 @@ Note -> Just like stored procedure triggers once created cannot be updated. To. 
 show triggers;
 show procedure status where db='classicmodels';
 ```
+
+### Database Transactions
+
+- In real life scenarios in order to perform a certain operation a series of  queries need to executed which might involve multiple CRUD operations to accomplish a single task. This is called a database transaction.
+- Now during the process of the transaction the databases might go through a  series of states and might be in an inconsistent intermediate state. If during the execution of these queries something went wrong then this transaction can be considered or not as the per the requirement therefore not leaving the database in an inconsistent state.
+- States of the transactions 
+     - Begin state -> When the transaction has just started. 
+     - Commit state -> When all the statements of the transactions are executed successfully.
+     - Rollback state -> Something went wrong during the query execution and all changes are reverted. 
+      Note - A Begin state can go to either Commit or Rollback state.
+- Transactional Properties  - **ACID**
+     - `Atomicity` ->  A transaction is a bundle of statements that tends to achieve a final state. While executing a transaction we either require all the statements to be executed or none at all. An intermediate state in never wanted. This is called **Atomicity**.
+     - `Consistency` ->  It means the data stored in the database is always valid and in a consistent state.
+     - `Isolation` ->  It is the ability of multiple transactions to execute without interfering with one another.
+         Ex- Suppose a transaction t1 is writing some data and transaction t2 is reading that data. Now it t1 transaction is rollbacked due to some error then t2 would have read the wrong and executed it set of query which would lead to problematic situation.
+    - `Durability` -> It states that the data should persist in case of any un-foreseen circumstances or database crash.
+
+ Note - Transaction is just a set of read-write operations.
+ 
+#### Execution Anomalies 
+ - `Read Write conflict`  - It occurs when two different values of the same data is read in the same transaction.It happens when on transaction reads the data then some other transaction updates and commits the changes. Now when the first transaction again reads the data then it encounters a different value.This is also called non- repeatable read.
+ - `Write Read conflict` - It occurs when one transaction reads and writes the data but does not commits it and some other transaction then reads, writes and commits it but the earlier transaction aborts and rollbacks.Here despite the first transaction being rolled back but the other transaction would have written this dirty data. Therefore it is also called problem of **DIRTY READ**. 
+ - `Write Write conflict` - It occurs when two transaction write or update the same data but neither one of them commit the changes.This is called called overwriting uncommitted data.
+ - `Phantom Read` -> A phantom read occurs when a transaction selects data twice and during this a new set of data is inserted or removed by some other transaction that is committed. Now the second read of the first transaction will give new set of values.
+
+#### How databases ensure Atomicity? 
+  - `Logging` -> DBMS logs all the queries which are executed which can later be undone.
+  - `Shadow Paging` -> DBMS makes copies of the action. This copy is initially considered an temporary copy.If the transaction completes then it starts points to a new temporary copy.
+
+##### Atomicity for MySQL 
+- After each commit or Rollback, the database remains in a consistent state.
+- In order to handle a rollback their are two types of logs available
+     - `Undo Log` ->  This log contains the records of how to undo the last change made by the transaction. If any transaction requires the original data as part of a consistent read operation then the un-modified data is retrieved from the undo logs.
+     - `Redo log` -> It is a disk based data structure that is used for crash recovery to correct the data written by Incomplete transaction. The state of data as before the crash is restored on restart of the database server.
+         Note - This restored state includes the changes which were applied by the transaction until  the server crashed.
+
+## Isolations 
+- `READ UNCOMMITED` -> (Execution is fast)
+     - There is almost no isolation present.
+     - It reads the uncommitted data at every step  that can be updated from other uncommitted transactions.
+     - Problem of dirty reads occur.
+
+- `READ COMMITED` -> 
+     - In this isolation a Lock-based concurrency control is implemented. It acquires a Write-lock on data selection until the end of the transaction but releases the Read-lock on select operation.So problems of non-repeatable reads can occur.
+     - In simpler words it guarantees that any data read is committed and uncommitted changes are not visible. Hence solves the problem of **Dirty Reads**. (Data if free to change after a read.)
+     - In this level each **Select** statement has a snapshot of its own data and if we again execute the same select again due to an another transaction committing an update then we'll get new set of data in the second select.
+
+- `REPEATABlE READ` ->
+     - A snapshot of the select  is taken when for the first time it executed and the same snapshot is used throughout the transactions when same select is used. 
+     - A transaction running at this level does not account for the changes made to the data by some other transaction.
+     - This bring the problem of **Phantom Read**. New that will be there but cannot not be read.
+
+- `Serializable` - >
+     - It completely isolated the effect of one transaction from another.
+     - It is a **REPEATABLE READ** with more isolation to avoid the **PHANTOM READ**.
+
+**Note - REPEATABLE READ is the default isolation level in MySQL** .
+
+### Durability 
+- The database should be durable enough to hold all the latest updates even if the system restarts or fails.
+- If a transaction updates and commits the data then the database should store the new data. Also if the transaction commits the data but the system fails before the data can be written then data should be written when the system comes back online.
+
+### Consistency 
+- Consistency in **INNODB**(Storage engine of MySQL) involves protection of data from crashes and maintaining data-integrity & consistency. In order to maintain consistency it gives us two features.
+     - Double Write Buffer
+     - Crash Recovery
+
+**Page** -> Page is unit that specifies how much data can be transferred between disk and memory. A page can contain one or more rows. If one row doesn't fit in a page then INNODB sets up addition 'pointer-style' data structure so that whole info of one row can go in a page.
+
+**Flush** -> When we write something in the database it is not immediately written to the storage for performance reasons. It instead stores that data either in memory or in temporary disk storage. INNODB Storage structures are periodically flushed which includes undo logs , redo logs and **buffer pool**. Flushing can happen due to  some memory area becoming full and system needs to free some space as if there is a commit involved then the transaction needs to be finalised. 
+
+#### Double Write Buffer 
+- It is the storage area where INNODB  writes pages flushed from the buffer pool before writing the pages to there positions in the data-files.
+- In the system crashed during the page-write operation then the INNODB can grab a good copy of the data from the double write buffer.
+#### Crash Recovery
+- In case of a system crash INNODB is able to access log files and restore the state of the system.
+
+### Avoiding Race Conditions by Locking mechanisms
+
+- `Shared Lock` -> It allows multiple transactions to read data at the same time but restricts them to perform write operation.
+- `Exclusive Lock` -> It prevents transactions from writing or reading the same data at the same time.
+- `Intent Lock` -> This lock is used to specify a transaction is planning to read or write a certain section of data.
+- `Row-level Lock` -> This allows the transaction to lock a specific row.
+
+MySQL is a Multi-version concurrency control(MVCC) database. It allows multiple transactions to read or write data without any conflict.
+This is achieved by MySQL by capturing the data it is about to modify at the start of the transaction and write the changes in an entirely new version of data. This allows the transaction to work with the original set of data without any conflict.
+
+### Types of Concurrency Control
+
+- Pessimistic Control ->  It can be implemented by applying Locking mechanisms or isolations or by simply using the **Serialisable** isolation level.
+- Optimistic Control -> It can be achieved by manually checking for conflict before making an update.
