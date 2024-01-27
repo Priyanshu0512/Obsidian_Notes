@@ -4,11 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "6f307d77434f5fde",
+        "id": "5e204d3461a22897",
         "type": "tabs",
         "children": [
           {
-            "id": "8b155d43f8dce2e1",
+            "id": "c01f80a5cb97a739",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend Development/Git & Github.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "50790a5a901b7ef0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,8 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4befe171fd878842",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend Development/Computer Networks.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -48,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "coer",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -93,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Backend Development/DataBases & MySQL.md",
+                "file": "Backend Development/Computer Networks.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Backend Development/DataBases & MySQL.md",
+                "file": "Backend Development/Computer Networks.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -133,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Backend Development/DataBases & MySQL.md"
+                "file": "Backend Development/Computer Networks.md"
               }
             }
           },
@@ -165,40 +190,41 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "audio-recorder:Start/stop recording": false,
-      "markdown-importer:Open format converter": false
+      "markdown-importer:Open format converter": false,
+      "audio-recorder:Start/stop recording": false
     }
   },
-  "active": "8b155d43f8dce2e1",
+  "active": "4befe171fd878842",
   "lastOpenFiles": [
-    "Backend Development/Promises in Javascript.md",
     "Backend Development/DataBases & MySQL.md",
-    "Matlab.md",
-    "Backend Development/Module Pattern in Node.md",
-    "Backend Development/Sequelize & CRUD.md",
-    "Backend Development/Setting up HTTP server on Node & Express.md",
-    "2024-01-09.md",
-    "Backend Development/Linux Fundamentals.md",
-    "README.md",
-    "Flights-App.md",
-    "Backend Development/Git & Github.md",
-    "Backend Development/MVC Architecture.md",
-    "Backend Development/Async Nature of JS.md",
-    "Backend Development/Folder Structures & ORM.md",
-    "Backend Development/Intro to Node.md",
-    "Backend Development/Client Server Architecture & REST.md",
-    "2023-12-18.md",
-    "2023-11-24.md",
-    "Recording 20231017194832.webm",
-    "2023-11-23.md",
-    "Backend Development/Generators, Iterators & Async Await.md",
-    "Backend Development/Callbacks & Inversion of Control.md",
     "Backend Development/Short circuiting and Coercion.md",
-    "Backend Development/Variables.md",
-    "Backend Development/Useful Packages.md",
-    "Backend Development/Security.md",
+    "Backend Development/Sequelize & CRUD.md",
+    "Backend Development/Promises in Javascript.md",
+    "Backend Development/Module Pattern in Node.md",
+    "Backend Development/Closures.md",
+    "Backend Development/Generators, Iterators & Async Await.md",
+    "Backend Development/Client Server Architecture & REST.md",
+    "Backend Development/Computer Networks.md",
+    "Notes/Python3.md",
+    "Flights-App.md",
+    "2023-10-17.md",
+    "2024-01-09.md",
+    "Backend Development/Authentication & JWT.md",
+    "Matlab.md",
+    "Idempotency.md",
+    "README.md",
+    "Recording 20240120202815.webm",
+    "Untitled.md",
     "Backend Development/Scopes.md",
+    "Backend Development/Useful Packages.md",
+    "Backend Development/Git & Github.md",
+    "Notes/HTML Tags List(complete).md",
+    "Notes/OpenCV(Till Video capture).md",
+    "Notes/Enviromental(FEC).md",
+    "Backend Development/Conditionals in Javascript.md",
     "Untitled.canvas",
+    "Backend Development/Setting up HTTP server on Node & Express.md",
+    "Recording 20231017194832.webm",
     "Frontend Development",
     "A",
     "ASync Await",

@@ -9,7 +9,9 @@ Note - It is not necessary that a client always have some UI.
 **Library** - It is some specific piece code which provides some functionality to the user. Ex - React.js is an library as it has a specific functionality.
 **Framework** - It is a collection of various libraries clubbed together to provide the facility of performing a variety of task just by using the in-built functions only. Ex - Angular.js 
 
-**REST** -Rest is Representational State Transfer.Rest is basically a set of guidelines to drive the architecture of the web.It is not a compulsion to write according to these guidelines as it is just a set of guidelines and not a protocol. API written following the rest guidelines are called RESTful APIs.
+**
+![[Recording 20240120202815.webm]]
+REST** -Rest is Representational State Transfer.Rest is basically a set of guidelines to drive the architecture of the web.It is not a compulsion to write according to these guidelines as it is just a set of guidelines and not a protocol. API written following the rest guidelines are called RESTful APIs.
 Other set of guidelines are SOAP,gRPC and GraphQL.
 
 # REST Guidelines 
@@ -42,3 +44,11 @@ Sending data can be done in three ways -
 
 **CRUD APIs** - CRUD stands for create, read, update and delete.
 An api which supports all these function along more are called CRUD APIs.
+
+
+## Idempotency
+
+- It is the properties in computer science which can be applied multiple times but are not processed after the first successful application therefore not changing the result after its execution.
+- Idempotence Api's can be made by sending an idempotency key with the request and while handling the request at the backend we store the key after a successful transaction. Now if another request is send by the client then firstly the idempotency key is checked if it is not stored in the database then the transaction is executed else the we reject the request
+
+
