@@ -4,47 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "5e204d3461a22897",
+        "id": "aa44b48d7d619da1",
         "type": "tabs",
         "children": [
           {
-            "id": "c01f80a5cb97a739",
+            "id": "365fca6de51891dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Backend Development/Git & Github.md",
+                "file": "Backend Development/Function Expression.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "50790a5a901b7ef0",
+            "id": "1bfdfb7c367d0e98",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Backend Development/DataBases & MySQL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4befe171fd878842",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Backend Development/Computer Networks.md",
+                "file": "Backend Development/Object-Oriented Programming.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,15 +71,7 @@
             }
           },
           {
-            "id": "9fd05bc60a2df1ce",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          },
-          {
-            "id": "a599db3f1163b02a",
+            "id": "0bca06a17e5d84ab",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -102,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 376.5
+    "width": 377.5
   },
   "right": {
     "id": "687bee340722f156",
@@ -118,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Backend Development/Computer Networks.md",
+                "file": "Backend Development/Object-Oriented Programming.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Backend Development/Computer Networks.md",
+                "file": "Backend Development/Object-Oriented Programming.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -158,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Backend Development/Computer Networks.md"
+                "file": "Backend Development/Object-Oriented Programming.md"
               }
             }
           },
@@ -189,41 +169,43 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false,
-      "audio-recorder:Start/stop recording": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "4befe171fd878842",
+  "active": "1bfdfb7c367d0e98",
   "lastOpenFiles": [
-    "Backend Development/DataBases & MySQL.md",
-    "Backend Development/Short circuiting and Coercion.md",
-    "Backend Development/Sequelize & CRUD.md",
-    "Backend Development/Promises in Javascript.md",
-    "Backend Development/Module Pattern in Node.md",
-    "Backend Development/Closures.md",
-    "Backend Development/Generators, Iterators & Async Await.md",
-    "Backend Development/Client Server Architecture & REST.md",
-    "Backend Development/Computer Networks.md",
-    "Notes/Python3.md",
-    "Flights-App.md",
-    "2023-10-17.md",
-    "2024-01-09.md",
-    "Backend Development/Authentication & JWT.md",
-    "Matlab.md",
-    "Idempotency.md",
-    "README.md",
-    "Recording 20240120202815.webm",
-    "Untitled.md",
-    "Backend Development/Scopes.md",
-    "Backend Development/Useful Packages.md",
-    "Backend Development/Git & Github.md",
-    "Notes/HTML Tags List(complete).md",
-    "Notes/OpenCV(Till Video capture).md",
-    "Notes/Enviromental(FEC).md",
-    "Backend Development/Conditionals in Javascript.md",
-    "Untitled.canvas",
+    "Backend Development/Intro to Node.md",
+    "Backend Development/Loops in Javascript.md",
     "Backend Development/Setting up HTTP server on Node & Express.md",
+    "Backend Development/Arrays & Objects in Javascript.md",
+    "Backend Development/Object-Oriented Programming.md",
+    "Asynchronous Javascript.md",
+    "Frontend Development/HTML.md",
+    "Frontend Development/DOM Manupliation.md",
+    "Frontend Development/Bootstrap.md",
+    "Backend Development/Promises in Javascript.md",
+    "Backend Development/Operators in Javascript.md",
+    "Backend Development/Scopes.md",
+    "Backend Development/Lexical Vs Dynamic Scoping.md",
+    "Backend Development/Authentication & JWT.md",
+    "Notes/CSS Basics.md",
+    "Backend Development/Function Expression.md",
+    "Backend Development/Conditionals in Javascript.md",
+    "Backend Development/Short circuiting and Coercion.md",
+    "Backend Development/Data Type.md",
+    "Backend Development/Javascript.md",
+    "Backend Development/Git & Github.md",
+    "Backend Development/How Internet Works?.md",
+    "Backend Development/Computer Networks.md",
+    "Backend Development/Generators, Iterators & Async Await.md",
+    "Backend Development/MVC Architecture.md",
+    "Backend Development/Vim.md",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "Untitled",
+    "Screenshot 2024-01-31 at 7.59.33 PM.png",
+    "Screenshot 2024-01-31 at 7.58.15 PM.png",
+    "Recording 20240120202815.webm",
     "Recording 20231017194832.webm",
     "Frontend Development",
     "A",
