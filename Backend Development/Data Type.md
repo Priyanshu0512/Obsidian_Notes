@@ -1,19 +1,22 @@
-There are a number of Data types in Javascript namely **Number, Boolean, String,  Symbol, Object, Undefined and Null.**
- 1. Number- It can store any real value.
- 3. String- They can be defined using a pair of Double quotes , single quotes or backticks.
- 4. Boolean- Have only two values either true(1) or false(0).
- 5. undefined- Something that does not have a value but can be defined later.
- 6. object- If key-value pair need to be stored then objects are used for that purpose.
-      Ex-
-      ```js
+There are a number of Data types in Javascript namely **Number, Boolean, String, Symbol, Object, Undefined and Null.**
+
+1.  Number- It can store any real value.
+2.  String- They can be defined using a pair of Double quotes , single quotes or backticks.
+3.  Boolean- Have only two values either true(1) or false(0).
+4.  undefined- Something that does not have a value but can be defined later.
+5.  object- If key-value pair need to be stored then objects are used for that purpose.
+    Ex-
+    ```js
     User1={
-           name: "priyanshu",
-           gender: "male",
-           posts: {
-           creation-date:"12/1/2023",
-         . content: undefined,
-                               }
-      }
+         name: "priyanshu",
+         gender: "male",
+         posts: {
+         creation-date:"12/1/2023",
+       . content: undefined,
+                             }
+    }
+    ```
+
 ```
  6. Null- It represents empty value unlike undefined which represents a variable which has not been assigned any value yet.
 
@@ -39,3 +42,4 @@ let z = "abc"; This is a String.
 (y === z)- Returns true as both as string and have same values.
 (x === z )- Returns false due to different types.
 
+```
