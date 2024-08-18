@@ -32,3 +32,43 @@ const object['location'] = "Something";
 ```
 
 **Note :- A function associated with a Object is called a Method.**
+
+```js
+const obj1 = {
+   name: 'something'
+}
+const obj2 = Object.assign({},obj1);
+```
+This method only creates a shallow copy of the object mentioned and not a complete clone of the object. What this means is that only the first level properties are only copied and if nested reference objects are present then they will keep pointing to the original memory address.
+
+
+### Enhanced Object Literals
+
+- In order to include and external object literal into an object literal only the name of the incoming object literal needs to be written which any key value pair to be included.
+```js
+ const obj1 ={
+    name: "someting"
+ }
+
+ const obj2 ={
+    age : 21,
+    obj1, // Instead of obj1 = obj1, 
+ }
+```
+
+- When creating a function expression inside the object the `function` keyword need not be written.
+```js
+const obj1 = {
+add(a , b){
+    console.log(a+b);
+    }
+}
+```
+
+- Property names can also be computed.\
+
+**Looping over Objects** 
+
+- `Ojbect.keys(objectName)` - Returns an array containing all the key names.
+- `Object.values(objectName)` - Returns an array containing all the values in the object.
+- `Object.entries(objectName)` -  Returns an array which contains key value pairs  of the object in form of the array.

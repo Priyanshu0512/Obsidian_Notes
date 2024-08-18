@@ -47,10 +47,12 @@ first display {
 Here first display is printed then the display function is called in the context of the phone object hence the phone object is printed.
 
 ### Calling context of this keyword
-- `Arrow functions` -> They do not get access to the this keyword.
+- `Arrow functions` -> They do not get access to the this keyword.The use the lexical this keyword of the parent scope.
 - `simple function` -> Value of this keyword is set to undefined (strict mode) else it points to the global context which is the window object in the browser.
 - `Methods` -> Points to the object who's method is called.
 - `EventListener` -> DOM element to which the event-handler is attached.
+**Note - Avoid using arrow functions in object methods as this keyword gets the global context which could be a potential entry point to the bugs.**
+
 
 Note - this keyword always refers to the calling site except in one case which is when used inside the an arrow function.Here it is resolved lexically.
 

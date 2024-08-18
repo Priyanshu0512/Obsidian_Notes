@@ -25,7 +25,7 @@ Ex-
 Why use named function expression?
 
 1.  Using named function increases the readability of the code as function name in itself will depict the use case of that particular function
-2.  While using recursive algorthims function cannot call itself it is not having a function name.
+2.  While using recursive algorithms function cannot call itself it is not having a function name.
 3.  During the call stack the function would not have any name in the call stack history and hence it would make it difficult to debug the code in case of errors.This is done using console.trace() function.
 
 **IIFE** - It stands for **Immediately Invoked Function Expression**. These functions are called when they are declared.

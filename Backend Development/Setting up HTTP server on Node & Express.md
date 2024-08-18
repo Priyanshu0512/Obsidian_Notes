@@ -46,7 +46,7 @@ app.post('/home',(request,response)=>{
 });
 
 app.listen(PORT,()=>{ //Boots up the server.
-    console.log(`The server is up and running of port          ${PORT}`);
+    console.log(`The server is up and running of port ${PORT}`);
 });```
 
 In express we can manually configure the server for different types of request.
@@ -97,3 +97,20 @@ Output on sending GET request
 
 **app.use('/path',callback)** - This function mounts the specified middleware or function at the specified path. The middleware function is executed when the requested path matches the path.
 Note- Whenever .use() is used the function or the properties gets applied to all the request in they match the patch.
+
+
+### Global Catches 
+In order to not expose the server data upon occurrence of an error global catches are present which are executed if error are encountered in the middle-wares  or in some other part of the code.
+```js
+app.use((err,req,res,next)=>{
+// Error handling logic 
+})
+```
+Note - This should be present in the last of the file in order to handle errors from all the routers above it. 
+
+
+```js 
+app.use(express.json())
+```
+The above line is used to specify the type of data that is incoming in the request body. 
+This ensures that data is parsed according to its type.
