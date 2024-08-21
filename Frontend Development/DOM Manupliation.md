@@ -160,6 +160,9 @@ element.addEventListener(eventType, eventHandler, useCapture);
 - `eventHandler`: A function that will be called when the event occurs.
 - `useCapture`: (Optional) A boolean value indicating whether to use the capturing phase (`true`) or the bubbling phase (`false`, default).
 
+ 
+- `onInput` : onInput is an event handler that is executed when a value is changed by the user in the input field. It executes dynamically on input change by the user.
+
 ## Event Bubbling & Capturing
 
 Event bubbling and event capturing are two types of event propagation in the HTML DOM.
@@ -173,3 +176,23 @@ They are ways to handle the order of events attached to child as well as the par
 - In this phase, the event travels from the target element back up to the root of the DOM tree.
 - Event handlers attached without specifying `useCapture` or with `useCapture` set to `false` are triggered during this phase.
 
+
+### Debouncing
+
+- Debouncing is a programming practice used to ensure that time-consuming tasks do not fire so often, making them more efficient. In the context of `onInput` events, debouncing is often applied to delay the execution of certain actions (e.g., sending requests) until after a user has stopped typing for a specific duration.
+
+### Throttling & Rate Limiting
+
+#### Throttling
+- **Definition:** Controls the rate at which a specific action is performed.
+- **Purpose:** Ensures a smooth user experience, preventing rapid consecutive actions.
+- **Implementation:** Limits the frequency of a particular function within a specified time frame.
+
+#### Rate Limiting
+- **Definition:** Controls the number of requests a client can make within a specific time period.
+- **Purpose:** Protects server resources, avoids abuse, and maintains fair usage.
+- **Implementation:** Typically applied at the server/API level, limiting requests per second or minute.
+#### Key Differences
+- Throttling focuses on action frequency; rate limiting focuses on request count.
+- Throttling can be applied to various actions; rate limiting is often used at the API level.
+- Throttling aims for a smooth user experience; rate limiting protects server resources and enforces fairness.

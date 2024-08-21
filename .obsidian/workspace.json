@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Frontend Development/DOM Manupliation.md",
+                "file": "Backend Development/Validation,Authentication,JWT & ZOD.md",
                 "mode": "source",
                 "source": false
               }
@@ -42,9 +42,29 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "aefdd046e4dd72fc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Frontend Development/React Foundations.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "df101cae2a39ad8d",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Frontend Development/DOM Manupliation.md",
+                "file": "Frontend Development/React Foundations.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Frontend Development/DOM Manupliation.md",
+                "file": "Frontend Development/React Foundations.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -150,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Frontend Development/DOM Manupliation.md"
+                "file": "Frontend Development/React Foundations.md"
               }
             }
           },
@@ -186,18 +206,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d1d63816da4385dc",
+  "active": "aefdd046e4dd72fc",
   "lastOpenFiles": [
+    "Frontend Development/React Foundations.md",
+    "Backend Development/Validation,Authentication,JWT & ZOD.md",
+    "Backend Development/MongoDB.md",
+    "Pasted image 20240820182132.png",
+    "Pasted image 20240820182119.png",
+    "Frontend Development/DOM Manupliation.md",
     "Backend Development/Javascript.md",
     "Backend Development/Sets , Maps & Strings.md",
     "Frontend Development/Bootstrap.md",
-    "Frontend Development/DOM Manupliation.md",
     "Frontend Development/HTML.md",
     "Backend Development/Arrays & Objects in Javascript.md",
-    "Backend Development/Validation,Authentication,JWT & ZOD.md",
     "Backend Development/Fetch API.md",
     "Backend Development/Setting up HTTP server on Node & Express.md",
-    "Backend Development/MongoDB.md",
     "Backend Development/DataBases & MySQL.md",
     "Idempotency.md",
     "Flights-App.md",
@@ -212,8 +235,6 @@
     "Backend Development/Security.md",
     "Backend Development/Promises in Javascript.md",
     "Backend Development/Scopes.md",
-    "Backend Development/Linux Fundamentals.md",
-    "2024-08-15.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "Untitled",
