@@ -143,3 +143,5 @@ function MyComponent({ prop1, prop2 }) {
 
 ### 8.Passing Functions as Props:
 - You can pass functions as props, allowing child components to communicate with their parent components.
+
+
