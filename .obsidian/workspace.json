@@ -25,19 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Frontend Development/Routing, Prop Drilling & Context API.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e97258060f0102d4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SIH.md",
+                "file": "Frontend Development/Tailwind CSS.md",
                 "mode": "source",
                 "source": false
               }
@@ -52,7 +40,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -118,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SIH.md",
+                "file": "Frontend Development/Tailwind CSS.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SIH.md",
+                "file": "Frontend Development/Tailwind CSS.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -158,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SIH.md"
+                "file": "Frontend Development/Tailwind CSS.md"
               }
             }
           },
@@ -194,37 +182,39 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e97258060f0102d4",
+  "active": "d1d63816da4385dc",
   "lastOpenFiles": [
+    "Frontend Development/Recoil.md",
+    "Frontend Development/Tailwind CSS.md",
     "Frontend Development/Routing, Prop Drilling & Context API.md",
+    "Pasted image 20240828001535.png",
+    "Pasted image 20240828001510.png",
+    "Frontend Development/React Hooks.md",
+    "Backend Development/Arrays & Objects in Javascript.md",
+    "Frontend Development/DOM Manupliation.md",
+    "Backend Development/Setting up HTTP server on Node & Express.md",
+    "Backend Development/Sequelize & CRUD.md",
+    "Backend Development/Object-Oriented Programming.md",
+    "Backend Development/MongoDB.md",
+    "Backend Development/Modern Operators & Strings.md",
+    "Backend Development/Loops in Javascript.md",
+    "Backend Development/Javascript.md",
+    "Frontend Development/React Foundations.md",
+    "Backend Development/Fetch API.md",
     "SIH.md",
+    "Frontend Development/React Re-rendering , Keys & Wrapper Components.md",
     "Matlab.md",
     "Frontend Development/HTML.md",
-    "Frontend Development/React Hooks.md",
     "Frontend Development/Untitled",
-    "Frontend Development/React Re-rendering , Keys & Wrapper Components.md",
-    "Frontend Development/React Foundations.md",
-    "Backend Development/Setting up HTTP server on Node & Express.md",
     "Pasted image 20240820182119.png",
     "Idempotency.md",
     "Flights-App.md",
     "Asynchronous Javascript.md",
     "Backend Development/Validation,Authentication,JWT & ZOD.md",
     "Notes/NumPy.md",
-    "Backend Development/MongoDB.md",
     "Backend Development/Promises in Javascript.md",
     "Pasted image 20240820182132.png",
-    "Frontend Development/DOM Manupliation.md",
-    "Backend Development/Javascript.md",
     "Backend Development/Sets , Maps & Strings.md",
-    "Frontend Development/Bootstrap.md",
-    "Backend Development/Arrays & Objects in Javascript.md",
-    "Backend Development/Fetch API.md",
-    "Backend Development/DataBases & MySQL.md",
-    "2024-08-16.md",
-    "2024-08-17.md",
-    "Backend Development/Intro to Node.md",
-    "Backend Development/EX.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "Untitled",

@@ -257,6 +257,7 @@ function App() {
   );
 }```
 
+
 > To solve this we can make the operation in the `setCount` function synchronous hence after the first `setCount` is finished updating the value of count that will be passed onto the second `setCount` will be the updated value.
 
 ### Different use-case scenario for `useCallback` & `useMemo` 
