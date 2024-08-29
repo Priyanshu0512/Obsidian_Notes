@@ -236,7 +236,9 @@ function App() {
   );
 }```
 
+
 > In the above code the `setCount` function updates the count variable asynchronously hence the output on the console will be `1` and the value of count in both the `setCount` function will on the first click will be `0` hence 2 re-renders will happen but the value will update by only one on each click.
+
 
 ```js
 function App() {
@@ -258,7 +260,9 @@ function App() {
 }```
 
 
+
 > To solve this we can make the operation in the `setCount` function synchronous hence after the first `setCount` is finished updating the value of count that will be passed onto the second `setCount` will be the updated value.
+
 
 ### Different use-case scenario for `useCallback` & `useMemo` 
 
@@ -267,6 +271,7 @@ function App() {
 
 ### useMemo - 
 - The primary use case scenario for `useMemo` is to memoize the return value for a given input and will execute the function only if the value in dependency array changes.
+
 
 >Therefore `useCallback` is used to memoize function signature while `useMemo` runs a function when input value changes. Though same functionality can be achieved by both the hooks but they both differ in the use-case scenario.
 

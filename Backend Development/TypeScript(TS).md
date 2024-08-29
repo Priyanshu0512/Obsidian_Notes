@@ -64,6 +64,8 @@ tsc -b //
 >  The `-b` flag tells TypeScript to build the project based on the configuration in `tsconfig.json`. This generates a JavaScript file (`index.js`) from the TypeScript source (`a.ts`).
 
 
+![[Pasted image 20240829193020.png]]
+
 ### Basic Types in Typescript
 
  In TypeScript, basic types serve as the building blocks for defining the data types of variables. Here's an overview of some fundamental types provided by TypeScript:
@@ -355,3 +357,7 @@ const team: Team = {
 console.log(team);
 // { name: 'connor', department: 'Physics', age: 21 }
 ```
+
+
+### Interfaces Vs Types 
+

@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Backend Development/TypeScript(TS).md",
+                "file": "Frontend Development/React Hooks.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Backend Development/TypeScript(TS).md",
+                "file": "Frontend Development/React Hooks.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Backend Development/TypeScript(TS).md",
+                "file": "Frontend Development/React Hooks.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Backend Development/TypeScript(TS).md"
+                "file": "Frontend Development/React Hooks.md"
               }
             }
           },
@@ -184,8 +184,10 @@
   },
   "active": "d1d63816da4385dc",
   "lastOpenFiles": [
-    "Backend Development/Arrays & Objects in Javascript.md",
+    "SIH.md",
     "Backend Development/TypeScript(TS).md",
+    "Pasted image 20240829193020.png",
+    "Backend Development/Arrays & Objects in Javascript.md",
     "Frontend Development/Tailwind CSS.md",
     "Frontend Development/Recoil.md",
     "Frontend Development/Routing, Prop Drilling & Context API.md",
@@ -202,7 +204,6 @@
     "Backend Development/Javascript.md",
     "Frontend Development/React Foundations.md",
     "Backend Development/Fetch API.md",
-    "SIH.md",
     "Frontend Development/React Re-rendering , Keys & Wrapper Components.md",
     "Matlab.md",
     "Frontend Development/HTML.md",
@@ -213,7 +214,6 @@
     "Asynchronous Javascript.md",
     "Backend Development/Validation,Authentication,JWT & ZOD.md",
     "Notes/NumPy.md",
-    "Backend Development/Promises in Javascript.md",
     "Pasted image 20240820182132.png",
     "Untitled 1.canvas",
     "Untitled.canvas",
