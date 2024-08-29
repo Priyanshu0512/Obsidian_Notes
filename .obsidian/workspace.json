@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Frontend Development/Tailwind CSS.md",
+                "file": "Backend Development/TypeScript(TS).md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Frontend Development/Tailwind CSS.md",
+                "file": "Backend Development/TypeScript(TS).md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Frontend Development/Tailwind CSS.md",
+                "file": "Backend Development/TypeScript(TS).md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Frontend Development/Tailwind CSS.md"
+                "file": "Backend Development/TypeScript(TS).md"
               }
             }
           },
@@ -184,13 +184,14 @@
   },
   "active": "d1d63816da4385dc",
   "lastOpenFiles": [
-    "Frontend Development/Recoil.md",
+    "Backend Development/Arrays & Objects in Javascript.md",
+    "Backend Development/TypeScript(TS).md",
     "Frontend Development/Tailwind CSS.md",
+    "Frontend Development/Recoil.md",
     "Frontend Development/Routing, Prop Drilling & Context API.md",
     "Pasted image 20240828001535.png",
     "Pasted image 20240828001510.png",
     "Frontend Development/React Hooks.md",
-    "Backend Development/Arrays & Objects in Javascript.md",
     "Frontend Development/DOM Manupliation.md",
     "Backend Development/Setting up HTTP server on Node & Express.md",
     "Backend Development/Sequelize & CRUD.md",
@@ -214,7 +215,6 @@
     "Notes/NumPy.md",
     "Backend Development/Promises in Javascript.md",
     "Pasted image 20240820182132.png",
-    "Backend Development/Sets , Maps & Strings.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "Untitled",
