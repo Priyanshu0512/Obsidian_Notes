@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Frontend Development/Routing, Prop Drilling & Context API.md",
+                "file": "Backend Development/Postgres.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Frontend Development/Routing, Prop Drilling & Context API.md",
+                "file": "Backend Development/Postgres.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Frontend Development/Routing, Prop Drilling & Context API.md",
+                "file": "Backend Development/Postgres.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Frontend Development/Routing, Prop Drilling & Context API.md"
+                "file": "Backend Development/Postgres.md"
               }
             }
           },
@@ -184,16 +184,21 @@
   },
   "active": "d1d63816da4385dc",
   "lastOpenFiles": [
-    "Pasted image 20240829193020.png",
-    "Pasted image 20240828001535.png",
-    "Pasted image 20240828001510.png",
+    "Pasted image 20240830230556.png",
+    "Photos/Pasted image 20240828001510.png",
+    "Photos/Pasted image 20240828001535.png",
+    "Photos/Pasted image 20240830230328.png",
+    "Backend Development/Postgres.md",
+    "Photos",
+    "Backend Development/Async Nature of JS.md",
+    "Backend Development/TypeScript(TS).md",
+    "Frontend Development/Routing, Prop Drilling & Context API.md",
+    "Photos/Pasted image 20240829193020.png",
     "Frontend Development/React Hooks.md",
     "SIH.md",
-    "Backend Development/TypeScript(TS).md",
     "Backend Development/Arrays & Objects in Javascript.md",
     "Frontend Development/Tailwind CSS.md",
     "Frontend Development/Recoil.md",
-    "Frontend Development/Routing, Prop Drilling & Context API.md",
     "Frontend Development/DOM Manupliation.md",
     "Backend Development/Setting up HTTP server on Node & Express.md",
     "Backend Development/Sequelize & CRUD.md",
@@ -212,12 +217,9 @@
     "Idempotency.md",
     "Flights-App.md",
     "Asynchronous Javascript.md",
-    "Backend Development/Validation,Authentication,JWT & ZOD.md",
-    "Notes/NumPy.md",
     "Pasted image 20240820182132.png",
     "Untitled 1.canvas",
     "Untitled.canvas",
-    "Untitled",
     "Screenshot 2024-01-31 at 7.59.33 PM.png",
     "Screenshot 2024-01-31 at 7.58.15 PM.png",
     "Recording 20240120202815.webm",

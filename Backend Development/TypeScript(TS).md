@@ -361,3 +361,128 @@ console.log(team);
 
 ### Interfaces Vs Types 
 
+### Major Differences
+
+#### 1. Declaration Syntax:
+
+- **Type:**
+    - Uses the `type` keyword.
+    - More flexible syntax, can represent primitive types, unions, intersections, and more.
+
+- **Interface:**
+    - Uses the `interface` keyword.
+    - Typically used for defining the structure of objects.
+
+#### 2. Extension and Merging: 
+
+- **Type:**
+    - Supports extending types.
+    - Can't be merged; if you define another type with the same name, it will override the previous one.
+
+- **Interface:**
+    - Supports extending interfaces using the `extends` keyword.
+    - Automatically merges with the same-name interfaces, combining their declarations.
+
+#### 3. Declaration vs. Implementation:
+
+- **Type:**
+    - Can represent any type, including primitives, unions, intersections, etc.
+    - Suitable for describing the shape of data.
+
+- **Interface:**
+    - Mainly used for describing the shape of objects.
+    - Can also be used to define contracts for classes.
+
+#### 4.Implementation for Classes:
+- Interfaces can be used to define contracts for class implementations.
+- Types are more versatile for creating complex types and reusable utility types.
+
+
+### When to Use Which
+
+- **Use Types:**
+    - For advanced scenarios requiring union types, intersections, or mapped types.
+    - When dealing with primitive types, tuples, or non-object-related types.
+    - Creating utility types using advanced features like conditional types.
+
+- **Use Interfaces:**
+    - When defining the structure of objects or contracts for class implementations.
+    - Extending or implementing other interfaces.
+    - When consistency in object shape is a priority.
+
+
+#### Arrays in Typescript
+
+- It you want to access in typescript simply add `[]` after the type.
+
+```typescript
+function maxElement(arr : number[]) // arr is a array of numbers.
+```
+
+
+### Enums
+
+- `Enums` in Typescript are a feature that allows you to define a set of named constants.
+
+```typescript
+enum Direction {
+  Up, // 0 if 10 
+  Down, // 1 if 20 
+  Left, // 2 then 21
+  Right, // 3 then 22
+}
+
+function keyPressed(key: Direction) {
+  if (key == Direction.Up) {
+    //Do someting
+  }
+}
+```
+
+Internal implementation in the js file.
+
+```js
+"use strict";
+var Direction;
+(function (Direction) {
+    Direction[Direction["Up"] = 0] = "Up";
+    Direction[Direction["Down"] = 1] = "Down";
+    Direction[Direction["Left"] = 2] = "Left";
+    Direction[Direction["Right"] = 3] = "Right";
+})(Direction || (Direction = {}));
+function keyPressed(key) {
+    if (key == Direction.Up) {
+    }
+}
+```
+
+- If you want to gives values to the enums other the default values of 0,1,2..etc 
+
+```typescript
+enum Direction {
+  Up = "up",
+  Down = "down",
+  Left = "left",
+  Right = "right",
+}
+```
+
+## Generics
+
+- Generics enable you to create components that work with any data type while still providing compile-time  type safety.
+
+```typescript
+function element<T>(arr: T[]): T {
+  return arr[0];
+}
+
+interface User {
+  name: string;
+  age?: number;
+}
+const el = element<User>([{ name: "connor" }]);
+const el2 = element<number>([1, 2]);
+console.log(el.name);
+console.log(el2);
+```
+
