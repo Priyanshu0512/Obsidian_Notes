@@ -65,3 +65,117 @@ SQL (Structured Query Language) databases, also known as relational databases, h
 - `ACID Properties`: SQL databases are designed to guarantee ACID (Atomicity, Consistency, Isolation, Durability) properties, making them ideal for applications that require transactions to be processed reliably.
 - `Complex Queries`: The SQL language provides powerful querying capabilities, allowing for complex data retrieval that can involve multiple tables and conditions.
 - `Mature Ecosystem`: SQL databases have been around for a long time, resulting in a mature ecosystem of tools, libraries, and best practices.
+
+
+
+### Understanding Vector Databases 
+
+```js
+Harkirat lives in India ⇒ [1, 2, 2, 2, 2,2 ]
+Harkirat is from Chandigarh ⇒ [1, 2, 2, 2, 3]
+Harkirat has been living in India, Chandigarh ⇒ [1, 2, 2, 2, 2, 3]
+The world is round ⇒ [1, 2, 10001, 1001, 001001]
+Pacman is such a good game ⇒ [100, 10001, 20020, 1-001, 100]
+```
+
+In the above example  `Harkirat` and `India` have similar co-ordinates in both the statements.All the numbers which are getting repeated signify that they have some common or similar words. For example repeated 2 might represent a similar word or a repeated sequence in the data. While identifiers like 10001 might appear to represent certain specific entities.
+
+>Vector databases leverage this property to perform efficient similarity searches. When a query vector is provided, the database can quickly find other vectors with similar coordinates, which correspond to records containing similar words or concepts, thus retrieving relevant information based on semantic similarity.
+
+- Creation of a new client and connecting it.
+
+``` Postgres 
+
+const client = new Client({
+  connectionString:
+    "postgresql://test_owner:0ndRlBkX1jMo@ep-wispy-boat-a59j5f2r.us-east-2.aws.neon.tech/test?sslmode=require",
+});
+
+async function createUserTable() {
+  await client.connect();
+  const table = await client.query(`
+        CREATE TABLE IF NOT EXISTS users (
+        id SERIAL PRIMARY KEY,
+        username VARCHAR(50) UNIQUE NOT NULL,
+        email VARCHAR(50) UNIQUE NOT NULL,
+        password VARCHAR(255) NOT NULL,
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+      )`);
+  console.log(table);
+}
+
+createUserTable();
+```
+
+- Data insertion into the table
+
+```Postgres
+async function insertData() {
+  await client.connect();
+  const insertion = await client.query(`
+        INSERT INTO users (username,email,password) VALUES('connor' ,'priyanshuk@gmail.com','qwerty12345')`);
+  console.log(insertion);
+}
+```
+
+- Data deletion into the table.
+
+```Postgres
+deleteResult = await client.query(
+  "DELETE FROM users WHERE id = 1;"
+);
+```
+
+- Data updation into the table
+
+```Postgres
+async function updateData() {
+  await client.connect();
+  const query = `UPDATE  users SET password = $1 WHERE email='abc@gmail.com'`;
+  const value = ["qazwsx"];
+  const updation = await client.query(query, value);
+  console.log(updation);
+}
+updateData();
+```
+
+
+```typescript
+import { Client } from 'pg';
+
+// Async function to fetch user data from the database given an emailasync function getUser(email: string) {
+  const client = new Client({
+   connectionSting: // something
+  });
+
+  try {
+    await client.connect();
+    const query = 'SELECT * FROM users WHERE email = $1';
+    const values = [email];
+    const result = await client.query(query, values);
+
+    if (result.rows.length > 0) {
+      console.log('User found:', result.rows[0]);
+      return result.rows[0];
+    } else {
+      console.log('No user found with the given email.');
+      return null;
+    }
+  } catch (err) {
+    console.error('Error during fetching user:', err);
+    throw err;
+  } finally {
+    await client.end();
+  }
+}
+
+// Example usagegetUser('user5@example.com').catch(console.error);
+```
+
+> Note - To prevent the security threat of SQL injection into the table the user provided strings must be keep separated from the original SQL query as shown in the above examples.
+
+
+
+
+# Prisma
+

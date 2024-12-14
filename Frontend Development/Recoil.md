@@ -65,3 +65,102 @@ function Even() {
   return <div>{!isEven ? "It is even" : null}</div>;
   }
 ```
+
+- Combining multiple atoms into a single atom and then using a selector on it.
+```js
+export const notificationsAtom = atom({
+  key: "allNotifications",
+  default: {
+    network: 50,
+    jobs: 0,
+    messages: 100,
+    noti: 10,
+  },
+});
+
+export const totalNotificationSelector = selector({
+  key: "totalNotificationSelector",
+  get: ({ get }) => {
+    const notifications = get(notificationsAtom);
+    return (
+      notifications.network +
+      notifications.jobs +
+      notifications.messages +
+      notifications.noti
+    );
+  },
+});```
+## Asynchronous Data Queries 
+
+-  The default function in the atom must be synchronous. In order to fetch data from the backend and avoid initialisation of the default parameters to 0 selectors can be used for Asynchronous Data Queries.
+
+```js
+const UserInfoState = atom({
+  key: 'UserInfo',
+  default: selector({
+    key: 'UserInfo/Default',
+    get: ({get}) => myFetchUserInfo(get(currentUserIDState)),
+  }),
+});
+
+```
+
+
+## Atom Family
+
+- The `default` parameters return an atom with the matching id.
+```js
+export const todoAtomFamily = atomFamily({
+  key: 'TodoAtomFamily',
+  default: id =>{
+    return Todo.find(x => x.id ===id) // Finding todo with required id.
+  }
+});
+
+
+const currentTodo = useRecoilValue(todoAtomFamily(id)); 
+// Instead of the calling the atom we can the atom family with the required id.
+
+```
+
+
+## selectorFamily
+
+```js
+export const todoAtomFamily = atomFamily({
+  key: "todoAtomFamily",
+  default: selectorFamily({
+    key: "todoSelectorFamily",
+    default:
+      (id) =>
+      async ({ get }) => { // {get} is required when accessing other atoms here                              not required.
+        const res = await axios.get("//url");
+        return res.data.todo;
+      },
+  }),
+});```
+
+> Note - Here default takes in the id and returns an async function which in turn returns the todo.
+
+> If multiple calls are made to the same id the the request is cached hence hence multiple backend calls are not send.
+
+
+## useRecoilStateLoadable 
+
+- This recoil State is used to when asynchronous a re made to the backend which might take up time hence to prevent the page from freezing `useRecoilStateLoadable` hook is used which gives a `loading` value if the data is being fetched from the backend and if the fetch is complete it returns `hasValue` which can be checked to load the data when available.
+
+```js
+const [ todo, setTodo]= useRecoilStateLoadable(todoAtomFamily(id));
+
+if(todo.state === 'loading'){
+    return <div>Loading...</div>
+}
+else if( todo.state ==='hasValue'){
+    return <div>
+      {todo.contents.title}
+      {todo.contents.description}
+    </div>
+}
+```
+
+> Apart form `loading` & `hasValue`   it also has the `hasError` state to catch errors.
