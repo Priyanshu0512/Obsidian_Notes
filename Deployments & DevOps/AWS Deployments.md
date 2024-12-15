@@ -125,3 +125,6 @@ NGINX uses an **event-driven, asynchronous architecture**, which allows it to ha
 sudo apt update
 sudo apt install nginx
 ```
+
+---
+
