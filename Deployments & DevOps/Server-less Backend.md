@@ -113,7 +113,6 @@ export default app
 
 ### Some wrangler(cli for cloudflare workers ) commands 
 
-
   - `wrangler init [name]`                           📥 Initialize a basic Worker
   - `wrangler dev [script]`                        👂 Start a local server for developing your Worker
   - `wrangler deploy [script]`                   🆙 Deploy a Worker to Cloudflare  [aliases: publish]

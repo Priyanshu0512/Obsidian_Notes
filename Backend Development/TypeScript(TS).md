@@ -1,3 +1,6 @@
+---
+
+---
 
 ## Types of Languages
 
@@ -15,7 +18,7 @@
 - `Early Error Detection`: Type errors are identified and addressed at compile-time, providing early feedback to developers. This leads to increased reliability and reduces the likelihood of runtime errors.
 -  **Examples of Strongly Typed Languages:** Java, C#, TypeScript
 
-
+---
 ## Why TypeScript??
 
 ### 1. Static Typing
@@ -30,7 +33,7 @@
 
 - TypeScript introduces concepts like interfaces and type declarations, enabling developers to define clear contracts for their code.
 - Interfaces help document the shape of objects, making it easier to understand and maintain the code.
-
+---
 ### Execution of TypeScript Code 
 
  1.`TypeScript Compiler (tsc)`-
@@ -50,7 +53,7 @@
 - Just-in-time (JIT) compilation or interpretation occurs to convert the code into machine code that the computer's processor can execute.
 
 
-In addition to the TypeScript Compiler (`**tsc**`), several alternative tools have gained popularity for their efficiency, speed, and additional features when transpiling TypeScript to JavaScript. Here are a couple of noteworthy ones:
+In addition to the TypeScript Compiler (**`tsc`**), several alternative tools have gained popularity for their efficiency, speed, and additional features when transpiling TypeScript to JavaScript. Here are a couple of noteworthy ones:
 
 1. `esbuild`: a highly performant JavaScript bundler and minifier, but it also supports TypeScript.
 2. `swc (Speedy Web Compiler)`: a fast and low-level JavaScript/TypeScript compiler.
@@ -97,7 +100,7 @@ run(function () {
 });
 ```
 
-
+---
 ## The `tsconfig.json` File in TypeScript
 
 The `tsconfig.json` file in TypeScript is a configuration file that provides settings for the TypeScript compiler (`tsc`).
@@ -221,7 +224,7 @@ Compilation Error: Implicit any type const greet = (name) => `Hello, ${name}!`;
 
 > These options provide flexibility and control over the compilation process, allowing you to structure your project and handle type-related scenarios according to your preferences.
 
-
+---
 ## Interfaces 
 
 In TypeScript, an interface is a way to define a contract for the shape of an object.It basically allows you to declare the types of properties of the object. It is like a blueprint of the object hence it eliminates the requirements of declaring types whenever object is used anywhere else.
@@ -299,8 +302,7 @@ const e = new Employee("connor",21);
 e.greet("hello"); // Prints hello connor
 ```
 
-
-
+---
 ## Types 
 
 - In TypeScript, **types** allow you to aggregate data together in a manner very similar to interfaces. They provide a way to define the structure of an object, similar to how interfaces do. 
@@ -358,10 +360,10 @@ console.log(team);
 // { name: 'connor', department: 'Physics', age: 21 }
 ```
 
-
+---
 ### Interfaces Vs Types 
 
-### Major Differences
+#### Major Differences
 
 #### 1. Declaration Syntax:
 
@@ -419,7 +421,7 @@ console.log(team);
 function maxElement(arr : number[]) // arr is a array of numbers.
 ```
 
-
+---
 ### Enums
 
 - `Enums` in Typescript are a feature that allows you to define a set of named constants.
@@ -467,6 +469,7 @@ enum Direction {
 }
 ```
 
+---
 ## Generics
 
 - Generics enable you to create components that work with any data type while still providing compile-time  type safety.
@@ -486,3 +489,4 @@ console.log(el.name);
 console.log(el2);
 ```
 
+---

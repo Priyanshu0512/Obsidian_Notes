@@ -112,8 +112,7 @@ createUserTable();
 ```Postgres
 async function insertData() {
   await client.connect();
-  const insertion = await client.query(`
-        INSERT INTO users (username,email,password) VALUES('connor' ,'priyanshuk@gmail.com','qwerty12345')`);
+  const insertion = await client.query(`INSERT INTO users      (username,email,password) VALUES('connor' ,'priyanshuk@gmail.com','qwerty12345')`);
   console.log(insertion);
 }
 ```

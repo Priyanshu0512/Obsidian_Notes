@@ -1,9 +1,9 @@
 VMs on AWS are called EC2 Servers
 
->  EC2 stands for Elastic compute Version 2.
+  EC2 stands for Elastic compute Version 2.
 	`Elastic` - Can increase/decrease the size of the machine
 	`Compute` - It is a machine
-
+	
 You can spin up a new EC2 instance from the aws dashboard
 
 ---
@@ -105,12 +105,12 @@ In AWS, **Security Groups** are a key feature used to control inbound and outbou
     - By default, all inbound and outbound traffic is **denied** unless explicitly allowed by rules.
 
 
-> Common Ports 
-> HTTP(IPv4)- 80
-> HTTPS(IPv6)- 443
-> SSH - 22 
+ **Common Ports** 
+- HTTP(IPv4)- 80
+- HTTPS(IPv6)- 443
+- SSH - 22 
 
-Note - If the port is specified with `:<port-number` in the URL then the request goes to the process running on that port else it goes to 443,80 or 22 depending upon http version used or trying to SSH into the server.
+Note - If the port is specified with `:<port-number>` in the URL then the request goes to the process running on that port else it goes to 443,80 or 22 depending upon http version used or trying to SSH into the server.
 
 --- 
 ### NGINX
@@ -127,4 +127,6 @@ sudo apt install nginx
 ```
 
 ---
+
+## Front-End Deployments on AWS
 
