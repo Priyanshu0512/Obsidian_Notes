@@ -490,3 +490,326 @@ console.log(el2);
 ```
 
 ---
+
+# 1. Pick 
+
+The `Pick` utility type in TypeScript is a powerful feature that allows you to construct new types by selecting a subset of properties from an existing type. This can be particularly useful when you need to work with only certain fields of a complex type, enhancing type safety and code readability without redundancy.
+
+#### Syntax -
+
+```ts
+Pick<Type, Keys>
+```
+
+- `Type`: The original type you want to pick properties from.
+- `Keys`: The keys (property names) you want to pick from the `Type`, separated by `|` (the union operator).
+
+
+```ts
+interface User {
+  name: string;
+  age: number;
+  password: string;
+  email: string;
+  id: number;
+}
+
+type updatedProps = Pick<User, "name" | "id" | "email">;
+
+function user(user1: User): void {
+  console.log(user1);
+  display(user1);
+}
+
+function display(user1: updatedProps): void {
+  console.log(`Name ${user1.name} id ${user1.id}  email ${user1.email}`);
+}
+```
+
+##### Benefits of Pick 
+
+- `Reduced Redundancy`: Instead of defining new interfaces manually for subsets of properties, Pick allows you to reuse existing types, keeping your code DRY (Don't Repeat Yourself).
+- `Enhanced Type Safety`: By creating more specific types for different use cases, you reduce the risk of runtime errors and make your intentions clearer to other developers.
+
+---
+
+# 2.Partial 
+
+The `Partial` utility type in TypeScript is used to create a new type by making all properties of an existing type optional. This is particularly useful when you want to update a subset of an object's properties without needing to provide the entire object.
+
+#### Syntax 
+
+```ts
+Partial<Type>
+```
+
+- Type: The original type you want to convert to a type with optional properties.
+
+```ts
+interface User {
+  name: string;
+  age: number;
+  password: string;
+  email: string;
+  id: number;
+}
+
+type updatedProps = Pick<User, "name" | "id" | "email">;
+
+type updatedPropsOptional = Partial<updatedProps>;
+
+function user(user1: User): void {
+  console.log(user1);
+  display(user1);
+}
+function display(user1: updatedPropsOptional): void {
+  console.log(`Name ${user1.name} id ${user1.id}  email ${user1.email}`);
+}
+
+display({
+  name: "Ishu",
+  id: 2,
+  // No email but still a valid function call as it is an optional property.
+});
+
+```
+
+##### Benefits of Using `Partial`
+
+1. `Flexibility in Updates`: `Partial` is ideal for update operations where you may only want to modify a few properties of an object.
+2. `Type Safety`: Even though the properties are optional, you still get the benefits of type checking for the properties that are provided.
+3. `Code Simplicity`: Using `Partial` can simplify function signatures by not requiring clients to pass an entire object when only a part of it is needed.
+
+---
+
+# 3.Readonly
+
+The Readonly utility type in TypeScript is used to make all properties of a given type read-only. This means that once an object of this type is created, its properties cannot be reassigned. It's particularly useful for defining configuration objects, constants, or any other data structure that should not be modified after initialization.
+
+#### Syntax 
+
+```ts
+Readonly<type>
+```
+
+- `Type`: The original type you want to convert to a read-only version.
+
+```ts
+type obj = {
+  name: string;
+  age: number;
+};
+
+const obj1: Readonly<obj> = {
+  name: "Priyanshu",
+  age: 22,
+};
+
+
+// Another way of using readonly
+type obj = {
+  readonly name: string;
+  readonly age: number;
+};
+```
+
+##### Benefits of Using `Readonly`
+
+1. `Immutability`: Ensures that objects are immutable after they are created, preventing accidental modifications.
+2. `Compile-Time Checking`: The immutability is enforced at compile time, catching potential errors early in the development process.
+
+>It's crucial to remember that the Readonly utility type enforces immutability at the TypeScript level, which means it's a compile-time feature. JavaScript, which is the output of TypeScript compilation, does not have built-in immutability, so the Readonly constraint does not exist at runtime.
+
+---
+
+# 4.Record 
+
+The **`Record<K, T>`** utility type is used to construct a type with a set of properties K of a given type T. It provides a cleaner and more concise syntax for typing objects when you know the shape of the values but not the keys in advance.
+
+##### Syntax 
+
+```ts
+Record<Keys,Type>
+```
+
+- `Keys` - - The set of keys for the object, often specified as a union of string literals(`"key1"| "key2" | ...`).
+- **`Type`**: The type of the values corresponding to the keys.
+
+```ts
+type ThemeSettings = {
+    name: "dark" | "light"; // Theme name
+    primaryColor: string;   // Hex code or color name
+    secondaryColor: string;
+};
+
+type LanguageSettings = {
+    code: string; // Language code (e.g., "en")
+    rtl: boolean; // Right-to-left language support
+};
+
+type UserSettings = Record<"theme" | "language", ThemeSettings | LanguageSettings>;
+
+const userSettings: UserSettings = {
+    theme: {
+        name: "dark",
+        primaryColor: "#000000",
+        secondaryColor: "#ffffff",
+    },
+    language: {
+        code: "en",
+        rtl: false,
+    },
+};
+```
+
+---
+
+# 5. Map
+
+In TypeScript, a `Map` is a built-in object that allows you to store key-value pairs. It is similar to an object, but it provides more flexibility for key types and better iteration support.
+
+##### Syntax 
+
+```ts
+Map<KeyType, ValueType>();
+```
+
+- **`KeyType`**: Type of the keys in the map.
+- **`ValueType`**: Type of the values associated with those keys.
+
+#### Features of `Map`
+
+1. **Flexible Key Types**: Unlike objects, `Map` keys can be of any type (e.g., numbers, strings, objects).
+2. **Preserves Order**: Keys and values maintain the order of their insertion.
+3. **Built-in Methods**:
+    - `.set(key, value)` → Adds or updates a key-value pair.
+    - `.get(key)` → Retrieves the value for a key.
+    - `.has(key)` → Checks if a key exists.
+    - `.delete(key)` → Removes a key-value pair.
+    - `.clear()` → Removes all key-value pairs.
+    - `.entries()` → Returns an iterator for `[key, value]` pairs.
+    - `.keys()` → Returns an iterator for keys.
+    - `.values()` → Returns an iterator for values.
+
+
+
+```ts
+interface User {
+  id: string;
+  name: string;
+}
+
+const usersMap = new Map<string, User>();
+
+usersMap.set('abc123', { id: 'abc123', name: 'John Doe' });
+usersMap.set('xyz789', { id: 'xyz789', name: 'Jane Doe' });
+
+console.log(usersMap.get('abc123')); // Output: { id: 'abc123', name: 'John Doe' }
+
+// Comples Keys in Map
+
+const objKey = { id: 1 };
+const map = new Map<object, string>();
+
+map.set(objKey, "Object Value");
+
+console.log(map.get(objKey)); // Output: "Object Value"
+
+```
+
+---
+
+### Record vs. Map
+
+- **Use `Record` when**: You are working with objects that have a fixed shape for values and string keys. It's ideal for typing object literals with known value types.
+- **Use `Map` when**: You need more flexibility with keys (not just strings or numbers), or you need to maintain the insertion order of your keys. Maps also provide better performance for large sets of data, especially when frequently adding and removing key-value pairs.
+
+---
+
+
+# 5. Exclude
+
+The Exclude utility type in TypeScript is used to construct a type by excluding from a union type certain members that should not be allowed. It's particularly useful when you want to create a type that is a subset of another type, with some elements removed.
+
+##### Syntax 
+
+```ts
+Exclude<T, U>
+```
+
+- `T`: The original union type from which you want to exclude some members.
+- `U`: The union type containing the members you want to exclude from `T`.
+
+```ts
+type Events = "up" | "down" | "right" | "left";
+
+type excludedEvents = Exclude<Events, "right">;
+
+function events(event: excludedEvents): void {
+  console.log(event);
+}
+
+events("up"); // up
+events("right"); //Error: Argument of type '"right"' is not assignable to parameter of type 'excludeedEvents'.
+```
+
+---
+
+
+## Type Inference in Zod
+
+Type inference in Zod is a powerful feature that allows TypeScript to automatically determine the type of data validated by a Zod schema. This capability is particularly useful in applications where runtime validation coincides with compile-time type safety, ensuring that your code not only runs correctly but is also correctly typed according to your Zod schemas.
+
+#### How Type Inference Works in Zod
+
+Zod schemas define the shape and constraints of your data at runtime. When you use Zod with TypeScript, you can leverage Zod's type inference to automatically generate TypeScript types based on your Zod schemas. This means you don't have to manually define TypeScript interfaces or types that replicate your Zod schema definitions, reducing redundancy and potential for error.
+
+```ts
+import { z } from 'zod';
+import express from "express";
+
+const app = express();
+app.use(express.json());
+
+// Define the schema for profile update
+const userProfileSchema = z.object({
+  name: z.string().min(1, { message: "Name cannot be empty" }),
+  email: z.string().email({ message: "Invalid email format" }),
+  age: z.number().min(18, { message: "You must be at least 18 years old" }).optional(),
+});
+
+app.put("/user", (req, res) => {
+  const result = userProfileSchema.safeParse(req.body);
+
+  if (!result.success) {
+    res.status(400).json({ error: result.error });
+    return;
+  }
+
+  const updateBody = result.data;
+
+  res.json({
+    message: "User updated",
+    updateBody
+  });
+});
+```
+
+#### Type of `updateBody`
+
+```ts
+{
+  name: string;
+  email: string;
+  age?: number;
+}
+```
+
+>If you try to access a property on updateBody that isn't defined in the schema, TypeScript will raise a compile-time error, providing an additional layer of type safety.
+
+#### Benefits of Type Inference in Zod
+
+1. `Reduced Boilerplate`: You don't need to manually define TypeScript types that mirror your Zod schemas.
+2. `Type Safety`: Ensures that your data conforms to the specified schema both at runtime (through validation) and at compile-time (through type checking).
+
+---
