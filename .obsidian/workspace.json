@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -222,12 +222,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d9c7bb70f880a96d",
+  "active": "0ad03ac7a3666da3",
   "lastOpenFiles": [
-    "Deployments & DevOps/Actionable Docker.md",
-    "Backend Development/Postgres & Prisma.md",
     "Backend Development/TypeScript(TS).md",
     "Deployments & DevOps/AWS Deployments.md",
+    "Deployments & DevOps/Actionable Docker.md",
+    "Backend Development/Postgres & Prisma.md",
     "Deployments & DevOps/Server-less Backend.md",
     "Frontend Development/Recoil.md",
     "SIH.md",
