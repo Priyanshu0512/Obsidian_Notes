@@ -130,3 +130,124 @@ sudo apt install nginx
 
 ## Front-End Deployments on AWS
 
+
+### Amazon S3 (Simple Storage Service) - Object Storage
+
+Amazon S3 is a scalable **object storage service** for storing, managing, and retrieving unstructured data. It is designed for high durability, scalability, and availability.
+##### Key Features:
+
+1. `Data Storage`: Stores data as objects in buckets. Each object has a unique key and metadata.
+2. `Durability`: Provides 99.999999999% (11 nines) durability for stored data.
+3. `Scalability`: Handles petabytes of data.
+4. `Access Control`:Supports fine-grained permissions and policies.
+5. `Use Cases`: Backups, media storage, big data analytics, static website hosting.
+
+---
+### Amazon Cloudfront - CDN
+
+Amazon Cloudfront is a content delivery network(CDN) which is used for caching data at edge-network globally for reduced latency thus accelerating the content delivery.
+
+##### Key Features:
+
+1. `Global Coverage`: Operates through a network of edge locations for low-latency content delivery.
+2. `Dynamic and Static Content`: Serves both cached static files and dynamic content.
+3. `Custom Rules`: Configures cache behaviors and delivery policies.
+4. `Use Cases`: Accelerating websites, streaming video, and delivering APIs.
+
+![[Pasted image 20241220191147.png]]
+
+---
+
+### Integration of S3 and CloudFront
+
+When used together, S3 and CloudFront create a powerful setup:
+
+1. `Store Origin Content in S3`: S3 acts as the origin server, hosting content like images, videos, or other assets.
+2. `Deliver via CloudFront`: CloudFront caches the content stored in S3 at its edge locations, reducing latency and improving global access speed.
+3. `Enhanced Performance and Security`:
+    - **CloudFront reduces latency** by serving cached content from nearby edge locations.
+    - S3 ensures high durability and provides a secure storage backend.
+
+---
+
+### Differences between S3 and CloudFront
+
+| **Aspect**        | **Amazon S3**                          | **Amazon CloudFront**                |
+| ----------------- | -------------------------------------- | ------------------------------------ |
+| **Purpose**       | Long-term object storage               | Fast content delivery                |
+| **Data Handling** | Stores unstructured data               | Caches and distributes data globally |
+| **Access Point**  | Accessed via bucket URLs or APIs       | Accessed through distribution URLs   |
+| **Performance**   | Focused on durability and availability | Focused on speed and low latency     |
+| **Use Cases**     | Data storage, backup, hosting          | Website acceleration, streaming      |
+
+---
+
+1. For frontends, mp4 files, images, `Object stores` + `CDNs` are a better approach.
+2. You can’t use the same for backends, since every request returns a different response. Caching doesn’t make any sense there.
+
+>💡 You can use edge networks for backends (deploy your backend on various servers on the internet) but data can’t be cached in there.
+
+---
+### Step 1. 
+
+#### Build you React project - 
+
+```bash 
+
+cd /link/to/your/react/project
+npm run build
+npm i -g serve
+serve
+
+```
+
+
+> This approach will not work for frameworks that use Server side rendering (like Next.js) This will work for basic React apps, HTML/CSS/JS apps.
+
+---
+### Step 2. 
+
+In AWS, S3 is their object store offering.
+- You can create a `bucket` in there. A `bucket` represents a logical place where you store all the files of a certain project.
+- Upload the files to the S3 bucket.
+
+> Your S3 bucket should be blocked by default, and you should allow cloudfront (CDN) to access it.
+
+---
+### Step 3.
+
+1. Create a cloudfront distribution.
+2. Select your S3 bucket as a source.
+
+>Origin Access Control (OAC) is a feature in Cloudfront, which allows you to restrict direct access to the content stored in your origin, such as an Amazon S3 bucket or a web server, ensuring that users can only access the content through the CDN distribution and not by directly accessing the origin URL.
+
+---
+
+### Step 4. 
+
+##### Connect to your own domain -
+
+1. Select edit on the root page.
+2. Attach a domain name to the distribution.
+3. Create a certificate. Since we want our website to be hosted on HTTPS, we should request a certificate for our domain
+
+![[Pasted image 20241220192936.png]]
+
+![[Pasted image 20241220192946.png]]
+
+4. Add a CNAME record for the website to point to your cloudfront URL
+
+---
+### Error Pages 
+
+You will notice a problem, whenever you try to access a route on your page that isn’t the index route (/user/1) , you reach an error page.This is because cloudfront is looking for a file `/user/1`in your S3, which doesn’t exist.
+
+To make sure that all requests reach `index.html`, add an `error page` that points to `index.html`
+
+![[Pasted image 20241220193201.png]]
+
+> You might have to invalidate cache to see this in action.
+
+---
+
+
