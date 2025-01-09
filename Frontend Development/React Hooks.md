@@ -57,7 +57,7 @@ useEffect(() => {
 
 ```
 
-> The problem with the above function is that on a state change of the `todo` the api call will be made but it is an asynchronous function hence if the request is not resolved and another state change happens another api call will be made which might get resolved first then the earlier call.\
+> The problem with the above function is that on a state change of the `todo` the api call will be made but it is an asynchronous function hence if the request is not resolved and another state change happens another api call will be made which might get resolved first then the earlier call.
 
 
 ## 3.useMemo
