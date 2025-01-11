@@ -11,10 +11,28 @@
             "id": "6900aab0a1ad4065",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Backend Development/WebSockets.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "WebSockets"
+            }
+          },
+          {
+            "id": "735a0affb8bcf682",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend Development/Pub-Sub & Redis.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Pub-Sub & Redis"
             }
           }
         ]
@@ -177,18 +195,24 @@
   },
   "active": "6900aab0a1ad4065",
   "lastOpenFiles": [
+    "Backend Development/Pub-Sub & Redis.md",
+    "2024-09-10.md",
+    "2024-10-29.md",
+    "2024-10-30.md",
+    "2024-12-14.md",
+    "2024-09-03.md",
+    "Backend Development/WebSockets.md",
+    "Deployments & DevOps/Actionable Docker.md",
+    "Pasted image 20250109134023.png",
+    "Pasted image 20250107201537.png",
+    "Pasted image 20250107193450.png",
+    "Pasted image 20250107180501.png",
+    "Pasted image 20241228185815.png",
+    "Pasted image 20241228185646.png",
+    "Pasted image 20241228175515.png",
     "Photos/Pasted image 20241220193201.png",
     "Photos/Pasted image 20241220141224.png",
     "Photos/Pasted image 20240829193020.png",
-    "Photos/Pasted image 20240828001535.png",
-    "Photos/Pasted image 20241214170922.png",
-    "Photos/Pasted image 20240830230556.png",
-    "Photos/Pasted image 20241220192946.png",
-    "Photos/Pasted image 20241220192936.png",
-    "Photos/Pasted image 20241220191147.png",
-    "Photos/Pasted image 20240828001510.png",
-    "Photos/Pasted image 20240830230328.png",
-    "Backend Development/WebSockets.md",
     "Backend Development/MVC Architecture.md",
     "Backend Development/Security.md",
     "Backend Development/MongoDB.md",
@@ -207,12 +231,6 @@
     "Backend Development/Useful Packages.md",
     "Backend Development/Promises in Javascript.md",
     "Backend Development/Callbacks & Inversion of Control.md",
-    "Backend Development/Javascript.md",
-    "Backend Development/Modern Operators & Strings.md",
-    "Backend Development/Computer Networks.md",
-    "Backend Development/Module Pattern in Node.md",
-    "Backend Development/DataBases & MySQL.md",
-    "Backend Development/Generators, Iterators & Async Await.md",
     "Photos",
     "Backend Development",
     "Frontend Development",
