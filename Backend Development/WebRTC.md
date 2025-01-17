@@ -374,7 +374,25 @@ export const Receiver = () => {
 
 
 ---
+### Trickle ICE in WebRTC
 
+**Trickle ICE (Interactive Connectivity Establishment)** is a mechanism used in WebRTC to gather and exchange network candidates (IP addresses and ports) incrementally between peers to establish a connection as quickly as possible. This method optimizes connection setup by allowing ICE candidates to be sent and processed as they are discovered, instead of waiting for all candidates to be gathered before sending them.
+
+### How Trickle ICE Works
+
+1. **Candidate Gathering**:
+    - The WebRTC client begins gathering ICE candidates from various sources:
+        - Host candidates (local network interfaces).
+        - Reflexive candidates (public-facing IPs via STUN servers).
+        - Relay candidates (via TURN servers for NAT traversal).
+2. **Trickling Candidates**:
+    - As each candidate is discovered, it is sent to the remote peer immediately, instead of waiting for all candidates to be gathered.
+    - The remote peer processes and tests connectivity with each candidate as it arrives.
+3. **Connection Establishment**:
+    - The peers test different combinations of candidates (candidate pairs) to determine the best path for communication (based on criteria like latency and packet loss).
+    - Once a valid pair is found, the connection is established, even if more candidates are still being gathered.
+
+---
 ## Other architectures
 
 There are two other popular architectures for doing WebRTC
@@ -383,7 +401,7 @@ There are two other popular architectures for doing WebRTC
 
 Problem with P2P architecture is that is does not scale well beyond 3-4 people. 
 
-![notion image][https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F085e8ad8-528e-47d7-8922-a23dc4016453%2Feecbe4a3-2b10-421a-8e42-1de3f10173ba%2FScreenshot_2024-05-04_at_7.55.05_PM.png?table=block&id=80cbf71c-099d-4d03-ba10-33f1c24d1e55&cache=v2]
+![notion image](https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F085e8ad8-528e-47d7-8922-a23dc4016453%2Feecbe4a3-2b10-421a-8e42-1de3f10173ba%2FScreenshot_2024-05-04_at_7.55.05_PM.png?table=block&id=80cbf71c-099d-4d03-ba10-33f1c24d1e55&cache=v2)
 
 ### SFU's 
 
