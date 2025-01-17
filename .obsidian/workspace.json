@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Backend Development/WebRTC.md",
+                "file": "Backend Development/Postgres & Prisma.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WebRTC"
+              "title": "Postgres & Prisma"
             }
           },
           {
@@ -27,15 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Backend Development/Pub-Sub & Redis.md",
+                "file": "Backend Development/WebRTC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pub-Sub & Redis"
+              "title": "WebRTC"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -193,15 +194,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6900aab0a1ad4065",
+  "active": "735a0affb8bcf682",
   "lastOpenFiles": [
-    "Pasted image 20250117112830.png",
+    "Backend Development/Postgres & Prisma.md",
     "Deployments & DevOps/Server-less Backend.md",
-    "Backend Development/WebRTC.md",
     "Deployments & DevOps/Docker.md",
-    "Deployments & DevOps/Connection Pooling in Server-less Env.md",
     "Deployments & DevOps/AWS Deployments.md",
     "Deployments & DevOps/Actionable Docker.md",
+    "Backend Development/WebSockets.md",
+    "Backend Development/WebRTC.md",
+    "Backend Development/Pub-Sub & Redis.md",
+    "Pasted image 20250117112830.png",
+    "Deployments & DevOps/Connection Pooling in Server-less Env.md",
     "Frontend Development/DOM Manupliation.md",
     "Frontend Development/Authentication.md",
     "Frontend Development/HTML.md",
@@ -218,8 +222,6 @@
     "Flights-App.md",
     "Asynchronous Javascript.md",
     "Backend Development/Client Server Architecture & REST.md",
-    "Backend Development/WebSockets.md",
-    "Backend Development/Pub-Sub & Redis.md",
     "2024-09-10.md",
     "Pasted image 20250109134023.png",
     "Pasted image 20250107201537.png",
@@ -230,7 +232,6 @@
     "Pasted image 20241228175515.png",
     "Photos/Pasted image 20241220193201.png",
     "Photos/Pasted image 20241220141224.png",
-    "Photos/Pasted image 20240829193020.png",
     "Photos",
     "Backend Development",
     "Frontend Development",

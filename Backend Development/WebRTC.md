@@ -383,7 +383,7 @@ There are two other popular architectures for doing WebRTC
 
 Problem with P2P architecture is that is does not scale well beyond 3-4 people. 
 
-[https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F085e8ad8-528e-47d7-8922-a23dc4016453%2Feecbe4a3-2b10-421a-8e42-1de3f10173ba%2FScreenshot_2024-05-04_at_7.55.05_PM.png?table=block&id=80cbf71c-099d-4d03-ba10-33f1c24d1e55&cache=v2]
+![notion image][https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F085e8ad8-528e-47d7-8922-a23dc4016453%2Feecbe4a3-2b10-421a-8e42-1de3f10173ba%2FScreenshot_2024-05-04_at_7.55.05_PM.png?table=block&id=80cbf71c-099d-4d03-ba10-33f1c24d1e55&cache=v2]
 
 ### SFU's 
 
