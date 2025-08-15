@@ -1,6 +1,5 @@
 - It is a programming interface for web documents.
 - It is a tree like representation of the web page that gets loaded into the browser.
-- 
 
 
 - **Selecting HTML element**

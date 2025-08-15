@@ -194,7 +194,6 @@ chain length = 1: 1 object
 **Basic commands relating to stashes** - 
 - `git stash` -> This command stashes all the files present in the staging area.
      Note - An initial commit is required before you can start stashing the files.
-
 - `git stash list` -> Use this command to get the list of all the stashes made.
 - `git stash apply` -> This commands brings backs the  last stashed files to the staging area while maintaining the stash as well.
 - `git stash apply stash@{<stash number>}` -> This is used in case of multiple stashes being done. Using this we can apply a particular stash as per the need using the stash number from the `git stash list`.

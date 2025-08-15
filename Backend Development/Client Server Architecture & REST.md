@@ -9,9 +9,7 @@ Note - It is not necessary that a client always have some UI.
 **Library** - It is some specific piece code which provides some functionality to the user. Ex - React.js is an library as it has a specific functionality.
 **Framework** - It is a collection of various libraries clubbed together to provide the facility of performing a variety of task just by using the in-built functions only. Ex - Angular.js 
 
-**
-![[Recording 20240120202815.webm]]
-REST** -Rest is Representational State Transfer.Rest is basically a set of guidelines to drive the architecture of the web.It is not a compulsion to write according to these guidelines as it is just a set of guidelines and not a protocol. API written following the rest guidelines are called RESTful APIs.
+**REST** -Rest is Representational State Transfer.Rest is basically a set of guidelines to drive the architecture of the web.It is not a compulsion to write according to these guidelines as it is just a set of guidelines and not a protocol. API written following the rest guidelines are called RESTful APIs.
 Other set of guidelines are SOAP,gRPC and GraphQL.
 
 # REST Guidelines 

@@ -1,4 +1,4 @@
-**Higher Order Functions**  - Functions which take another functions as an argument are called HOF's or Functions which consume another functions.
+**Higher Order Functions**   - Functions which take another functions as an argument are called HOF's or Functions which consume another functions.
 
 ```js
 function hof(x, fn){

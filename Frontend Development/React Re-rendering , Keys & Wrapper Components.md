@@ -60,9 +60,6 @@ function App() {
       </>
     );
   }
-   function updateTitle() {
-    setTitle(Math.random());
-  }
   return (
     <React.Fragment>
       <HeaderWithButton /> 

@@ -8,31 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6900aab0a1ad4065",
+            "id": "aee801e80c20fe34",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Backend Development/Singleton Pattern.md",
+                "file": "Frontend Development/React Re-rendering , Keys & Wrapper Components.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Singleton Pattern"
-            }
-          },
-          {
-            "id": "57ccf1f0047c89f0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Backend Development/Redis , Pub-Sub & Messaging Queues.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Redis , Pub-Sub & Messaging Queues"
+              "title": "React Re-rendering , Keys & Wrapper Components"
             }
           }
         ]
@@ -54,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -66,11 +53,11 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "reconcili",
                 "matchingCase": false,
-                "explainSearch": false,
+                "explainSearch": true,
                 "collapseAll": true,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
@@ -91,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363.5
+    "width": 370.5
   },
   "right": {
     "id": "687bee340722f156",
@@ -193,40 +180,40 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6900aab0a1ad4065",
+  "active": "3f1ef4ac3680d109",
   "lastOpenFiles": [
-    "Backend Development/Redis , Pub-Sub & Messaging Queues.md",
-    "Backend Development/Singleton Pattern.md",
-    "Backend Development/WebRTC.md",
-    "Backend Development/Advanced BE Communication & WebSockets.md",
-    "Deployments & DevOps/Actionable Docker.md",
-    "Deployments & DevOps/AWS Deployments.md",
-    "Deployments & DevOps/Docker.md",
-    "Deployments & DevOps/Server-less Backend.md",
-    "Backend Development/Postgres & Prisma.md",
-    "Pasted image 20250117112830.png",
-    "Deployments & DevOps/Connection Pooling in Server-less Env.md",
-    "Frontend Development/DOM Manupliation.md",
-    "Frontend Development/Authentication.md",
-    "Frontend Development/HTML.md",
-    "Frontend Development/Nest.Js ( Client Side ).md",
-    "Frontend Development/Nest.Js (Server Side).md",
-    "Frontend Development/React Re-rendering , Keys & Wrapper Components.md",
-    "Frontend Development/Tailwind CSS.md",
+    "Low Level Design(LLD)",
     "Frontend Development/Routing, Prop Drilling & Context API.md",
-    "Frontend Development/Recoil.md",
-    "Frontend Development/React Hooks.md",
-    "Frontend Development/React Foundations.md",
+    "Notes/Python3.md",
+    "Notes/Random Dump.md",
+    "Notes/OpenCV(Till Video capture).md",
+    "Notes/CSS Basics.md",
+    "Notes/C(For CO101).md",
+    "Notes/Command Line(For CSS course).md",
+    "Notes/Enviromental(FEC).md",
+    "Notes/HTML Tags List(complete).md",
     "Matlab.md",
-    "Idempotency.md",
+    "Notes/Github(Too Basic Incomplete).md",
+    "SIH.md",
+    "Untitled.md",
+    "Untitled 1.md",
     "Flights-App.md",
+    "Idempotency.md",
     "Asynchronous Javascript.md",
-    "Backend Development/Client Server Architecture & REST.md",
-    "Pasted image 20250109134023.png",
+    "2025-05-13.md",
+    "2025-03-12.md",
+    "2025-03-28.md",
+    "2025-04-19.md",
+    "2025-06-30.md",
+    "2025-06-06.md",
+    "2025-05-14.md",
+    "2025-07-05.md",
     "Pasted image 20250107201537.png",
+    "Pasted image 20241228185815.png",
+    "Pasted image 20250117112830.png",
+    "Pasted image 20250109134023.png",
     "Pasted image 20250107193450.png",
     "Pasted image 20250107180501.png",
-    "Pasted image 20241228185815.png",
     "Pasted image 20241228185646.png",
     "Pasted image 20241228175515.png",
     "Photos/Pasted image 20241220193201.png",
